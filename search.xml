@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[2016年度总结知行合一]]></title>
-      <url>http://localhost:4000/2016/12/30/2016%E5%B9%B4%E5%8B%BF%E5%BF%98%E5%88%9D%E5%BF%83%EF%BC%8C%E6%96%B9%E5%BE%97%E5%A7%8B%E7%BB%88/</url>
+      <url>http://dalingge.com/2016/12/30/2016%E5%B9%B4%E5%8B%BF%E5%BF%98%E5%88%9D%E5%BF%83%EF%BC%8C%E6%96%B9%E5%BE%97%E5%A7%8B%E7%BB%88/</url>
       <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>抓住2016的最后一个工作日，写一篇年终总结，转眼之间，一年的时光已经悄然消逝。想写点什么，却发现早已习惯复制粘贴的我，在这一刻竟有点无从下手。想来想去，还是用几个关键词总结一下我的2016吧。</p>
 <h2 id="帝都"><a href="#帝都" class="headerlink" title="帝都"></a>帝都</h2><p>帝都雾霾严重，帝都人山人海，帝都……，一提到帝都，很多人脑海中就出现这样的关键词，但不可否认，只要你努力，帝都有更多的机会和资源，机会每周都要技术开发的大会，为年轻人学习交流提供很好的平台。</p>
 <h2 id="成长"><a href="#成长" class="headerlink" title="成长"></a>成长</h2><p>可以说2016年是我快速成长的一年。</p>
@@ -45,13 +45,13 @@
     
     <entry>
       <title><![CDATA[仿简书滑动伸缩效果]]></title>
-      <url>http://localhost:4000/2016/12/25/%E4%BB%BF%E7%AE%80%E4%B9%A6%E6%BB%91%E5%8A%A8%E4%BC%B8%E7%BC%A9%E6%95%88%E6%9E%9C/</url>
+      <url>http://dalingge.com/2016/12/25/%E4%BB%BF%E7%AE%80%E4%B9%A6%E6%BB%91%E5%8A%A8%E4%BC%B8%E7%BC%A9%E6%95%88%E6%9E%9C/</url>
       <content type="html"></content>
     </entry>
     
     <entry>
       <title><![CDATA[参加Google开发者大会体验]]></title>
-      <url>http://localhost:4000/2016/12/08/%E5%8F%82%E5%8A%A0Google%E5%BC%80%E5%8F%91%E8%80%85%E5%A4%A7%E4%BC%9A%E4%BD%93%E9%AA%8C/</url>
+      <url>http://dalingge.com/2016/12/08/%E5%8F%82%E5%8A%A0Google%E5%BC%80%E5%8F%91%E8%80%85%E5%A4%A7%E4%BC%9A%E4%BD%93%E9%AA%8C/</url>
       <content type="html"><![CDATA[<p>第一次参加怎么高逼格的大会内心还是比较激动的</p>
 <h2 id="7点50到达国家会议中心"><a href="#7点50到达国家会议中心" class="headerlink" title="7点50到达国家会议中心"></a>7点50到达国家会议中心</h2><p><img src="/img/GDD/IMG_7598.jpeg" alt=""></p>
 <h2 id="进门就看到了我大Android机器人"><a href="#进门就看到了我大Android机器人" class="headerlink" title="进门就看到了我大Android机器人"></a>进门就看到了我大Android机器人</h2><p><img src="/img/GDD/IMG_5577.jpeg" alt=""></p>
@@ -74,7 +74,7 @@
     
     <entry>
       <title><![CDATA[青春向左，魔兽向右]]></title>
-      <url>http://localhost:4000/2016/06/08/%E9%9D%92%E6%98%A5%E5%90%91%E5%B7%A6%EF%BC%8C%E9%AD%94%E5%85%BD%E5%90%91%E5%8F%B3/</url>
+      <url>http://dalingge.com/2016/06/08/%E9%9D%92%E6%98%A5%E5%90%91%E5%B7%A6%EF%BC%8C%E9%AD%94%E5%85%BD%E5%90%91%E5%8F%B3/</url>
       <content type="html"><![CDATA[<p>回望再回望，厉兵秣马的战场<br>握拳再握拳，守护家园的理想<br>远眺再远眺，无尽征途的前方<br>荣光不落！信仰不灭！<br>为了联盟！为了部落！</p>
 <p>魔兽对于我来说就像初恋</p>
 <p>仍时不时地关注着她的最新动态</p>
@@ -119,7 +119,7 @@
     
     <entry>
       <title><![CDATA[Objective-C语言基础]]></title>
-      <url>http://localhost:4000/2016/05/05/Objective-C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</url>
+      <url>http://dalingge.com/2016/05/05/Objective-C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</url>
       <content type="html"><![CDATA[<p>我学习IOS的一个记录笔记</p>
 <h2 id="面向对象的编程"><a href="#面向对象的编程" class="headerlink" title="面向对象的编程"></a>面向对象的编程</h2><p>OO：面向对象<br>OOA：分析<br>OOD：设计<br>OOP：实现<br>优点：易于维护和扩展<br>核心思想：封装，继承，多态<br>类：类是抽象的<br>对象：对象是类中的个体，成员<br>类和对象的关系：类是对象的抽象和封装;对象是类的实例化，个体化，具体化。<br>定义类：<br>方法：+表示静态方法 访问通过[类名 方法名]<br>           -表示实例方法 访问通过[对象名 方法名]<br>无参数：方法的修饰 （返回类型） 方法名{}<br>有参数：方法的修饰 （返回类型） 方法名：（类型）名 ：（类型）名。。。。{}</p>
 <h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>封装：如果是@public违反了，面向对象的三大特征<br>方法定义时：-set首字母大写<br>-get首字母大写<br>简便方法: @property (readwrite) int cId; //相当于.h文件声明 readwrite 读写<br>@synthesize cId;//相当于.m文件定义<br>@property(assign,nonatomic) NSString * loginid;<br>内存计数器，线程安全管理<br>基本数据类型用 assign<br>对象类型用 strong</p>
@@ -164,7 +164,7 @@ if (str==nil) {
     
     <entry>
       <title><![CDATA[Android混淆详解]]></title>
-      <url>http://localhost:4000/2016/05/05/Android%E6%B7%B7%E6%B7%86%E8%AF%A6%E8%A7%A3/</url>
+      <url>http://dalingge.com/2016/05/05/Android%E6%B7%B7%E6%B7%86%E8%AF%A6%E8%A7%A3/</url>
       <content type="html"><![CDATA[<p>当前是有些工具比如apktool，dextojar等是可以对我们android安装包进行反编译，获得源码的。为了减少被别人破解，导致源码泄露，程序被别人盗取代码，等等。我们需要对代码进行混淆，android的sdk中为我们提供了ProGrard这个工具，可以对代码进行混淆（一般是用无意义的名字来重命名），以及去除没有使用到的代码，对程序进行优化和压缩，这样可以增加你想的难度。</p>
 <h2 id="Tag-未整理"><a href="#Tag-未整理" class="headerlink" title="Tag 未整理"></a>Tag 未整理</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-keepnames <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">packagename</span>.<span class="title">ClassName</span>$* </span>&#123;</div><div class="line">    <span class="keyword">public</span> &lt;fields&gt;;</div><div class="line">    <span class="keyword">public</span> &lt;methods&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这种方式可以禁止混淆内部类。</p>
@@ -254,7 +254,7 @@ if (str==nil) {
     
     <entry>
       <title><![CDATA[Android学习之路]]></title>
-      <url>http://localhost:4000/2016/04/12/Android%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</url>
+      <url>http://dalingge.com/2016/04/12/Android%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF/</url>
       <content type="html"><![CDATA[<p>收集整理Android开发资料，这份资料我会不断的更新完善, 该份学习资料有不足的地方, 也请指出, 我会谦虚接受改正, 希望我能与大家一起来学习, 谢谢。</p>
 <p><strong>如果您有任何意见或建议也可以通过<a href="mailto:445850053@qq.com" target="_blank" rel="external">邮件</a>联系我</strong></p>
 <h2 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a><a href="#开源项目" title="开源项目"></a>开源项目</h2><p><a href="http://square.github.io/retrofit/" target="_blank" rel="external">Retrofit</a><br>Retrofit和Java领域的ORM概念类似， ORM把结构化数据转换为Java对象，而Retrofit 把REST API返回的数据转化为Java对象方便操作。同时还封装了网络代码的调用。</p>
@@ -325,7 +325,7 @@ if (str==nil) {
     
     <entry>
       <title><![CDATA[新的开始]]></title>
-      <url>http://localhost:4000/2016/03/16/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
+      <url>http://dalingge.com/2016/03/16/%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B/</url>
       <content type="html"><![CDATA[<p>#有过那样一个我，那样的生活过。他的身影印在这个时代里。我看见他的传说。</p>
 ]]></content>
     </entry>
