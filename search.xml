@@ -153,7 +153,10 @@
     <entry>
       <title><![CDATA[仿简书滑动伸缩效果]]></title>
       <url>http://dalingge.com/2016/12/25/%E4%BB%BF%E7%AE%80%E4%B9%A6%E6%BB%91%E5%8A%A8%E4%BC%B8%E7%BC%A9%E6%95%88%E6%9E%9C/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p>效果图：</p>
+<p><img src="/img/search.gif" alt=""></p>
+<p>项目地址请移步<a href="https://github.com/dalingge/SearchAnimView" target="_blank" rel="external">Github</a>，欢迎Star，Issues，给予鼓励是继续完善与维护的动力！</p>
+]]></content>
     </entry>
     
     <entry>
