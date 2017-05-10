@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Title -->
+    
+    <title>
+        使用Jsoup抓取干货集中营闲读数据 | 达令哥的博客
+    </title>
+    
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+    
+    <!-- Meta & INfo -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="达令哥">
+    <meta name="description" content="有过那样一个我，那样的生活过。他的身影印在这个时代里。我看见他的传说。">
+    <meta name="keywords" content="达令哥">
+    
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+    
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="达令哥的博客">
+    
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://dalingge.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="使用Jsoup抓取干货集中营闲读数据 | 达令哥的博客">
+    <meta property="og:description" content="有过那样一个我，那样的生活过。他的身影印在这个时代里。我看见他的传说。">
+    
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+        
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+    
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+	body, html{
+		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	}
+	
+    a{
+        color: #00838F
+    }
+    
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important
+    }
+    
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: #0097A7 !important
+    }
+    
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: #0097A7 !important
+    }
+    
+    .toTop{
+        background: #757575 !important
+    }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: #757575;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: #757575;
+	}
+
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: #757575;
+	}
+	
+	.post-toc a:hover{
+		color: #00838F;
+		text-decoration: underline;
+	}
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+	<script src="/js/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="/css/highlight/atelier-forest-light.css">
+	
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<link rel="stylesheet" href="/css/uc.css">');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+    
+    <!-- Custom Head -->
+    
+</head>
+	
+	
+
+    <body id="scheme-Paradox">
+
+		
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			
+			
+            <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+				
+                <!-- Top Anchor -->
+                <div id="top"></div>
+				
+				
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+				
+				
+                <!-- Post TOC -->
+
+    
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Jsoup介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">Jsoup介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#干货集中营"><span class="post-toc-number">2.</span> <span class="post-toc-text">干货集中营</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#抓取需要的数据"><span class="post-toc-number">3.</span> <span class="post-toc-text">抓取需要的数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下面就是提取页面上的子分类和列表数据"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">下面就是提取页面上的子分类和列表数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#封装使用"><span class="post-toc-number">4.</span> <span class="post-toc-text">封装使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#写在最后"><span class="post-toc-number">5.</span> <span class="post-toc-text">写在最后</span></a></li></ol>
+		
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
+	
+		<!-- Custom Thumbnail -->
+		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/header/610dc034gw1f9zx9ad13qj21ao0583zp.jpg)">
+	
+        <p class="article-headline-p">
+            使用Jsoup抓取干货集中营闲读数据
+        </p>
+    </div>
+
+	
+
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>达令哥</strong>
+        <span>5月 09, 2017</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+    
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a>
+    </ul>
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    
+    
+    
+    <!-- Busuanzi Views -->
+    <a class="post_share-link" href="#">
+        <li class="mdl-menu__item">
+            <span id="busuanzi_container_page_pv">
+                <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+            </span>
+        </li>
+    </a>
+    
+    
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用Jsoup抓取干货集中营闲读数据&url=http://dalingge.com//2017/05/09/使用Jsoup抓取干货集中营闲读数据/index.html&via=达令哥" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+    
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2017/05/09/使用Jsoup抓取干货集中营闲读数据/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+    
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用Jsoup抓取干货集中营闲读数据&url=http://dalingge.com//2017/05/09/使用Jsoup抓取干货集中营闲读数据/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+</ul>
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<h2 id="Jsoup介绍"><a href="#Jsoup介绍" class="headerlink" title="Jsoup介绍"></a>Jsoup介绍</h2><p>jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。</p>
+<p>关于Jsoup的介绍，请访问Jsoup的官网：<a href="http://jsoup.org/" target="_blank" rel="external">http://jsoup.org/</a></p>
+<p>关于Jsoup的jar包下载地址：<a href="http://jsoup.org/download" target="_blank" rel="external">http://jsoup.org/download</a></p>
+<p>关于Jsoup的官网API文档查询：<a href="http://jsoup.org/apidocs/" target="_blank" rel="external">http://jsoup.org/apidocs/</a></p>
+<p>关于Jsoup的中文使用示例：<a href="http://www.open-open.com/jsoup/" target="_blank" rel="external">http://www.open-open.com/jsoup/</a></p>
+<h2 id="干货集中营"><a href="#干货集中营" class="headerlink" title="干货集中营"></a>干货集中营</h2><p>干货集中营是代码家大神做的一款每周一至周五中午都会分享妹子图和技术干货网站，可以通过API，获取公开数据。</p>
+<p>大家通过开放API练习开发自己的APP集中营，现在网上流传这各式各样的APP，但是犹豫受到了接口的限制（毕竟大神都是很忙的），所以不能做出自己理想的APP。</p>
+<p>今天就教大家使用Jsoup来获取集中营当中闲读的数据。</p>
+<p>下面言归正传…</p>
+<h2 id="抓取需要的数据"><a href="#抓取需要的数据" class="headerlink" title="抓取需要的数据"></a>抓取需要的数据</h2><p>首先进入<a href="http://gank.io/xiandu" target="_blank" rel="external">闲读</a>直接右键显示网页源码(或者F12)；我们可以看到很多HTML+CSS标签；我使用的是Google Chrome浏览器；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"xiandu_cat"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">style</span>=<span class="string">"border: 1px solid #747474;"</span> <span class="attr">href</span>=<span class="string">"/xiandu"</span>&gt;</span>科技资讯<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/apps"</span>&gt;</span>趣味软件/游戏<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/imrich"</span>&gt;</span>装备党<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/funny"</span>&gt;</span>草根新闻<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/android"</span>&gt;</span>Android<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/diediedie"</span>&gt;</span>创业新闻<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/thinking"</span>&gt;</span>独立思想<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/iOS"</span>&gt;</span>iOS<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/xiandu/teamblog"</span>&gt;</span>团队博客<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这里直接找到要抓取的数据闲读分类，之后需要分析是从什么节点开始才是一条数据；就好比数组[{},{}]一样；里面每个数据都是以什么开头的；这里分析之后可以看到是以<code>&lt;div id=&quot;xiandu_cat&quot;&gt;</code>为节点就是一组数据；<code>&lt;a&gt;</code>相当于一条数据，需要获取标签里面分类名字和分类的href；</p>
+<p>我们所需要的东西已经找到；接下来我们去抓取出数据封装一下就可以用了；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">List&lt;ReadTypeBean&gt; datas = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    Document doc = Jsoup.connect(<span class="string">"http://gank.io/xiandu"</span>).get();</div><div class="line">    Elements tads = doc.select(<span class="string">"div#xiandu_cat"</span>).select(<span class="string">"a"</span>);</div><div class="line">    <span class="keyword">for</span> (Element tad : tads) &#123;</div><div class="line">        ReadTypeBean bean = <span class="keyword">new</span> ReadTypeBean();</div><div class="line">        bean.setTitle(tad.text());<span class="comment">//获取标题</span></div><div class="line">        bean.setUrl(tad.absUrl(<span class="string">"href"</span>));<span class="comment">//absUrl可以获取地址的绝对路径</span></div><div class="line">        datas.add(bean);</div><div class="line">        Log.v(<span class="string">"Jsoup"</span>,<span class="string">"title= "</span>+bean.getTitle()+<span class="string">"   url= "</span>+bean.getUrl());</div><div class="line">    &#125;</div><div class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">    subscriber.onError(e);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>可以看到先是通过Jsoup.connect(url).get();获取一个Document；</p>
+<p>这样就可以通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据；</p>
+<p>首先解析上面说的节点<code>&lt;div id=&quot;xiandu_cat&quot;&gt;</code>下面的所有<code>&lt;a&gt;</code>标签，会得到一个Elements通过for循环取出需要的数据；</p>
+<p>text()获取标签中的文本，absUrl(“href”) 提取地址的绝对路径；</p>
+<p><img src="/img/jsoup/AACA7FE3-3EF8-41AC-A5E5-F92012528057.png" alt=""></p>
+<p>可以看到我们需要的数据已经打印出来了;</p>
+<h3 id="下面就是提取页面上的子分类和列表数据"><a href="#下面就是提取页面上的子分类和列表数据" class="headerlink" title="下面就是提取页面上的子分类和列表数据"></a>下面就是提取页面上的子分类和列表数据</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;div class="xiandu_choice"&gt;</div><div class="line">    &lt;ul&gt;</div><div class="line">            &lt;li&gt;</div><div class="line">                &lt;a href="/xiandu/view/engadget"&gt;</div><div class="line">                    &lt;img src="http://ww1.sinaimg.cn/large/0066P23Wjw1f9rym3y697j30300300sj.jpg" title="Engadget 中文版" alt="" class="site-img"&gt;</div><div class="line">                &lt;/a&gt;</div><div class="line">            &lt;/li&gt;</div><div class="line"></div><div class="line">            &lt;li&gt;</div><div class="line">                &lt;a href="/xiandu/view/williamlong"&gt;</div><div class="line">                    &lt;img src="http://ww2.sinaimg.cn/large/0066P23Wjw1f9u8ddodymj3020020wea.jpg" title="月光博客" alt="" class="site-img"&gt;</div><div class="line">                &lt;/a&gt;</div><div class="line">            &lt;/li&gt;</div><div class="line"></div><div class="line">    &lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>同理找到子分类<code>&lt;div id=&quot;xiandu_choice&quot;&gt;</code>为节点的数据；和上面的的分类同样的方法获取即可</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"xiandu_item"</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"xiandu_left"</span>&gt;</span></div><div class="line">             <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"upvote"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">             <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"xiandu_index"</span>&gt;</span>1:<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">             <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"site-title"</span></span></div><div class="line">                <span class="attr">href</span>=<span class="string">"http://www.ifanr.com/832492?utm_medium=website&amp;amp;utm_source=gank.io%2Fxiandu"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;在通往信用社会的路上，学会用芝麻分“薅羊毛”也是一件正经事<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">             <span class="tag">&lt;<span class="name">span</span>&gt;</span></div><div class="line">                     <span class="tag">&lt;<span class="name">small</span>&gt;</span></div><div class="line">                         16 分钟前</div><div class="line">                     <span class="tag">&lt;/<span class="name">small</span>&gt;</span></div><div class="line">                 <span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"xiandu_right"</span>&gt;</span></div><div class="line">             <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"site-name"</span> <span class="attr">href</span>=<span class="string">"/xiandu/view/ifanr"</span></span></div><div class="line">                <span class="attr">title</span>=<span class="string">"爱范儿"</span></div><div class="line">                <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</div><div class="line">                 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://ww3.sinaimg.cn/large/0066P23Wjw1f9rylijz6rj3030030gle.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"site-img"</span>/&gt;</span></div><div class="line">             <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上面可以看到<code>&lt;div class=&quot;axiandu_item&quot;&gt;</code>为节点就是一条数据；里面有两个<code>div</code>节点，我们需要的详情连接和标题是在<code>&lt;div class=&quot;xiandu_left&quot;&gt;</code>层下的标签<code>&lt;a href&gt;</code>中；<br>我们需要的图片和类别是在<code>&lt;div class=&quot;xiandu_right-intro&quot;&gt;</code>层下的<code>&lt;img src&gt;</code>里面；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">ReadTypeBean readTypeBean = <span class="keyword">new</span> ReadTypeBean();</div><div class="line">readTypeBean.setTitle(requestContext.getType());</div><div class="line">readTypeBean.setUrl(requestContext.getUrl());</div><div class="line">List&lt;ReadChildTypeBean&gt; readChildTypeBeanList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">List&lt;ReadListBean&gt; readListBeanList = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line"><span class="keyword">try</span> &#123;</div><div class="line">    Document doc = Jsoup.connect(requestContext.getUrl()).get();</div><div class="line">    Elements childs = doc.select(<span class="string">"div.xiandu_choice"</span>).select(<span class="string">"a"</span>);<span class="comment">//提取子分类</span></div><div class="line">    <span class="keyword">for</span> (Element child : childs) &#123;</div><div class="line">        ReadChildTypeBean bean = <span class="keyword">new</span> ReadChildTypeBean();</div><div class="line">        Elements img = child.select(<span class="string">"img"</span>);</div><div class="line">        bean.setTitle(img.attr(<span class="string">"title"</span>));</div><div class="line">        bean.setImg(img.attr(<span class="string">"src"</span>));</div><div class="line">        bean.setUrl(child.absUrl(<span class="string">"href"</span>));</div><div class="line">        readChildTypeBeanList.add(bean);</div><div class="line">    &#125;</div><div class="line">    Elements items = doc.select(<span class="string">"div.xiandu_item"</span>);<span class="comment">//提取列表数据</span></div><div class="line">    <span class="keyword">for</span> (Element item : items) &#123;</div><div class="line">        ReadListBean bean = <span class="keyword">new</span> ReadListBean();</div><div class="line">        Elements aLeft = item.select(<span class="string">"div.xiandu_left"</span>).select(<span class="string">"a"</span>);</div><div class="line">        bean.setTitle(aLeft.text());</div><div class="line">        bean.setLink(aLeft.attr(<span class="string">"href"</span>));</div><div class="line">        bean.setTime(item.select(<span class="string">"small"</span>).text());</div><div class="line">        Elements aRight = item.select(<span class="string">"div.xiandu_right"</span>).select(<span class="string">"a"</span>);</div><div class="line">        bean.setSource(aRight.attr(<span class="string">"title"</span>));</div><div class="line">        bean.setLogo(aRight.select(<span class="string">"img"</span>).attr(<span class="string">"src"</span>));</div><div class="line">        readListBeanList.add(bean);</div><div class="line">    &#125;</div><div class="line">    Element button = doc.select(<span class="string">"a.button"</span>).last();<span class="comment">//提取下一页数据</span></div><div class="line">    readTypeBean.setPage(button.absUrl(<span class="string">"href"</span>));</div><div class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</div><div class="line">    subscriber.onError(e);</div><div class="line">&#125;</div><div class="line">readTypeBean.setReadListBeanList(readListBeanList);</div><div class="line">readTypeBean.setReadChildTypeBeanList(readChildTypeBeanList);</div></pre></td></tr></table></figure>
+<p>上面的就是获取所有分类页面的数据，可以看到在最后面还有<code>doc.select(&quot;a.button&quot;).last();</code>，通过分析html代码页面上有两个button类型的<a>标签，使用last()得到最后一位button的地址就是下一页面的数据，从而实现上拉分页的效果。</a></p>
+<h2 id="封装使用"><a href="#封装使用" class="headerlink" title="封装使用"></a>封装使用</h2><p>接着我们就是接收跟封装数据了，毕竟我们习惯了后台服务器返回的那种json数据；接下来写一个简易的Bean类如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReadTypeBean</span> <span class="keyword">implements</span> <span class="title">Parcelable</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String title;</div><div class="line">    <span class="keyword">private</span> String url;</div><div class="line">    <span class="keyword">private</span> String page;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getTitle</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> title;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTitle</span><span class="params">(String title)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.title = title;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUrl</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> url;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUrl</span><span class="params">(String url)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.url = url;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPage</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> page;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPage</span><span class="params">(String page)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.page = page;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="/img/jsoup/S70508-10435784.jpg" alt=""></p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>在这里我们还可以是使用<a href="https://github.com/VictorAlbertos/RxCache" target="_blank" rel="external">RxCache</a>来对数据进行缓存，比如分类可以永久缓存到本地，以节省网络资源的浪费。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">    * 获取闲读分类信息</div><div class="line">    * 永久</div><div class="line">    * <span class="doctag">@param</span> oRepos 缓存数据</div><div class="line">    * <span class="doctag">@param</span> userName</div><div class="line">    * <span class="doctag">@param</span> evictDynamicKey false使用缓存  true 加载数据不使用缓存</div><div class="line">    * <span class="doctag">@return</span> 数据</div><div class="line">    */</div><div class="line">  Observable&lt;Reply&lt;List&lt;ReadTypeBean&gt;&gt;&gt; getTypeList(Observable&lt;List&lt;ReadTypeBean&gt;&gt; oRepos, DynamicKey userName, EvictDynamicKey evictDynamicKey);</div><div class="line"></div><div class="line"></div><div class="line">   <span class="comment">/**</span></div><div class="line">    * 获取闲读分类下对应类别</div><div class="line">    * 缓存时间 1天</div><div class="line">    * <span class="doctag">@param</span> oRepos  缓存数据</div><div class="line">    * <span class="doctag">@param</span> userName</div><div class="line">    * <span class="doctag">@param</span> evictDynamicKey false使用缓存  true 加载数据不使用缓存</div><div class="line">    * <span class="doctag">@return</span> 数据</div><div class="line">    */</div><div class="line">   <span class="meta">@LifeCache</span>(duration = <span class="number">1</span>, timeUnit = TimeUnit.DAYS)</div><div class="line">   Observable&lt;Reply&lt;ReadTypeBean&gt;&gt; getStackTypeList(Observable&lt;ReadTypeBean&gt; oRepos, DynamicKey userName, EvictDynamicKey evictDynamicKey);</div></pre></td></tr></table></figure>
+<p>部分代码</p>
+<p>全部代码<a href="https://github.com/dalingge/GankGirl" target="_blank" rel="external">Github</a>，希望对大家有所帮助，祝大家撸码愉快！</p>
+
+	
+	
+	
+	
+</div>
+				
+				
+
+                <!-- Post Comments -->
+                
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+            data-thread-key="2017/05/09/使用Jsoup抓取干货集中营闲读数据/" 
+            data-url="http://dalingge.com/2017/05/09/使用Jsoup抓取干货集中营闲读数据/"
+            data-title="使用Jsoup抓取干货集中营闲读数据"></div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/05/05/西安之旅/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
+
+				
+				
+					<!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay "></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+	<div id="sidebar-main">
+	    <!-- Sidebar Header -->
+		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_avatar.png" alt="达令哥's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        445850053@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+		<!-- Sidebar Navigation  -->
+		<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+			
+                <li>
+                    <a href="mailto:445850053@qq.com" target="_blank" title="Email Me">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+<!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+-->
+
+	
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">四月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
+        </ul>
+    </li>
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+	
+		<li>
+			<a href="/tags/" title="标签云">
+				标签云
+			</a>
+		</li>
+	
+		<li>
+			<a href="/links/" title="友情链接">
+				友情链接
+			</a>
+		</li>
+	
+		<li>
+			<a href="/about" title="关于">
+				关于
+			</a>
+		</li>
+	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+             文章总数
+             <span class="sidebar-badge">10</span>
+        </a>
+    </li>
+</ul>
+
+		<!-- Sidebar Divider -->
+		<div class="sidebar-divider"></div>
+
+		<!-- Sidebar Footer -->
+		<!-- 
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持。 :) 
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		主题 - Material
+		<span class="sidebar-badge badge-circle">i</span>
+	</div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		sidebar.help
+		<span class="mdl-button__ripple-container">
+			<span class="mdl-ripple"></span>
+		</span>
+	</div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+	</div>
+    
+    <!-- Sidebar Sponsor -->
+    
+
+
+</aside>
+
+				
+				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+				
+				
+				<!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+	
+	
+		<!-- Paradox Footer Left Section -->
+		<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+    
+    
+    <!-- Facebook -->
+    
+    <a href="https://zh-cn.facebook.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+        <span class="visuallyhidden">Facebook</span>
+    </button></a>
+    
+    
+    <!-- Google + -->
+    
+    <a href="https://www.google.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+        <span class="visuallyhidden">Google Plus</span>
+    </button></a>
+    
+    
+    <!-- Weibo -->
+    
+    <a href="http://weibo.com/u/2208609043" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+        <span class="visuallyhidden">Weibo</span>
+    </button></a>
+    
+    
+    <!-- Instagram -->
+    
+    <a href="https://www.instagram.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-instagram.png);">
+        <span class="visuallyhidden">Instagram</span>
+    </button></a>
+    
+    
+    <!-- Tumblr -->
+    
+    
+    
+    <!-- Github -->
+    
+    <a href="https://github.com/dalingge" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+        <span class="visuallyhidden">Github</span>
+    </button></a>
+    
+</div>
+
+
+		<!--Copyright-->
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;达令哥的博客</div>
+
+		<!-- Paradox Footer Right Section -->
+
+		<!-- 
+		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+		It will not impact the appearance and can give developers a lot of support :)
+
+		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+		它不会影响美观并可以给开发者很大的支持。 :) 
+		-->
+
+		<div class="mdl-mini-footer--right-section">
+			<div>
+				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+			</div>
+		</div>
+	
+    
+</footer>
+                
+				<!-- Import File -->
+<script src="/js/highlight.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    <!-- 多说公共 js 代码 start -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dalingge"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'https://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共 js 代码 end -->
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+	<script>
+	var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length <= 0) {
+                    return;
+                }
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ data_title;
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out characters
+                            var start = first_occur - 6;
+                            var end = first_occur + 6;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 10;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substr(start, end); 
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<em class=\"search-keyword\">"+keyword+"</em>");
+                            })
+                            str += "<p class=\"search-result\">" + match_content +"...</p>" +"</a>";
+                        }
+                    }
+                })
+                $resultContent.innerHTML = str;
+            })
+        }
+    })
+}
+</script>
+
+	<script>
+        var inputArea = document.querySelector("#search");
+        var getSearchFile = function(){
+            var path = "search.xml";
+            searchFunc(path, 'search', 'local-search-result');
+        }
+
+        inputArea.onfocus = function(){ getSearchFile() }
+	</script>
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>
+
+<!-- MathJax Load-->
+
+            </main>
+        </div>
+		
+    </body>
+		
+	
+</html>
