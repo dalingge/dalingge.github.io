@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        仿简书滑动伸缩效果 | 达令哥的博客
+        使用ProgressBar实现左右进度条自定义样式 | 达令哥的博客
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://dalingge.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="仿简书滑动伸缩效果 | 达令哥的博客">
+    <meta property="og:title" content="使用ProgressBar实现左右进度条自定义样式 | 达令哥的博客">
     <meta property="og:description" content="有过那样一个我，那样的生活过。他的身影印在这个时代里。我看见他的传说。">
     
      <!--[if lte IE 9]>
@@ -217,7 +217,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#废话不多说直接上源码"><span class="post-toc-number">1.</span> <span class="post-toc-text">废话不多说直接上源码</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -251,7 +251,7 @@
 		
 	
         <p class="article-headline-p">
-            仿简书滑动伸缩效果
+            使用ProgressBar实现左右进度条自定义样式
         </p>
     </div>
 
@@ -269,7 +269,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>达令哥</strong>
-        <span>12月 25, 2016</span>
+        <span>5月 13, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -289,7 +289,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/动画/">动画</a>
+        <a class="post_tag-link" href="/tags/Android/">Android</a>
     </ul>
     
     <!-- Share -->
@@ -313,21 +313,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=仿简书滑动伸缩效果&url=http://dalingge.com//2016/12/25/仿简书滑动伸缩效果/index.html&via=达令哥" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用ProgressBar实现左右进度条自定义样式&url=http://dalingge.com//2017/05/13/使用原生ProgressBar实现左右进度条自定义样式/index.html&via=达令哥" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2016/12/25/仿简书滑动伸缩效果/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2017/05/13/使用原生ProgressBar实现左右进度条自定义样式/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=仿简书滑动伸缩效果&url=http://dalingge.com//2016/12/25/仿简书滑动伸缩效果/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用ProgressBar实现左右进度条自定义样式&url=http://dalingge.com//2017/05/13/使用原生ProgressBar实现左右进度条自定义样式/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -339,9 +339,12 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>效果图：</p>
-<p><img src="/img/search.gif" alt=""></p>
-<p>项目地址请移步<a href="https://github.com/dalingge/SearchAnimView" target="_blank" rel="external">Github</a>，欢迎Star，Issues，给予鼓励是继续完善与维护的动力！</p>
+		<h4 id="废话不多说直接上源码"><a href="#废话不多说直接上源码" class="headerlink" title="废话不多说直接上源码"></a>废话不多说直接上源码</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">ProgressBar</span></span></div><div class="line">        <span class="attr">style</span>=<span class="string">"?android:attr/progressBarStyleHorizontal"</span></div><div class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></div><div class="line">        <span class="attr">android:layout_height</span>=<span class="string">"4dp"</span></div><div class="line">        <span class="attr">android:max</span>=<span class="string">"105"</span></div><div class="line">        <span class="attr">android:maxHeight</span>=<span class="string">"4dp"</span></div><div class="line">        <span class="attr">android:progress</span>=<span class="string">"40"</span></div><div class="line">        <span class="attr">android:progressDrawable</span>=<span class="string">"@drawable/progressbar_stalls"</span></div><div class="line">        <span class="attr">android:secondaryProgress</span>=<span class="string">"60"</span> /&gt;</div></pre></td></tr></table></figure>
+<p>progressDrawable 引用的progressbar_stalls:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">layer-list</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">"@android:id/background"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">shape</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"1.5dp"</span> /&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#ffffff"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">"@android:id/secondaryProgress"</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 设置从左往右变化 --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">scale</span></span></div><div class="line">            <span class="attr">android:scaleGravity</span>=<span class="string">"right"</span></div><div class="line">            <span class="attr">android:scaleWidth</span>=<span class="string">"100%"</span>&gt;</div><div class="line">            <span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"1.5dp"</span> /&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#ffb000"</span> /&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">scale</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">item</span> <span class="attr">android:id</span>=<span class="string">"@android:id/progress"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">scale</span> <span class="attr">android:scaleWidth</span>=<span class="string">"100%"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">shape</span> <span class="attr">android:shape</span>=<span class="string">"rectangle"</span>&gt;</span></div><div class="line">                <span class="comment">&lt;!-- solid指定形状的填充色，只有android:color一个属性 --&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">solid</span> <span class="attr">android:color</span>=<span class="string">"#458cf5"</span> /&gt;</span></div><div class="line">                <span class="comment">&lt;!-- padding设置内容区域离边界的间距 --&gt;</span></div><div class="line">                <span class="comment">&lt;!-- corners设置圆角，只适用于rectangle --&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">corners</span> <span class="attr">android:radius</span>=<span class="string">"1.5dp"</span> /&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">shape</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">scale</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">layer-list</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>这样就大功告成了，算是个开发小技巧吧！</p>
+<p>最后的效果：</p>
+<p><img src="/img/1318BE89-279A-44E3-B706-3D2B35ADA2DD.png" alt=""></p>
 
 	
 	
@@ -369,9 +372,9 @@
 <div id="comments">
     <!-- 多说评论框 start -->
         <div class="ds-thread" 
-            data-thread-key="2016/12/25/仿简书滑动伸缩效果/" 
-            data-url="http://dalingge.com/2016/12/25/仿简书滑动伸缩效果/"
-            data-title="仿简书滑动伸缩效果"></div>
+            data-thread-key="2017/05/13/使用原生ProgressBar实现左右进度条自定义样式/" 
+            data-url="http://dalingge.com/2017/05/13/使用原生ProgressBar实现左右进度条自定义样式/"
+            data-title="使用ProgressBar实现左右进度条自定义样式"></div>
     <!-- 多说评论框 end -->
 </div>
 
@@ -384,21 +387,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/12/30/2016年勿忘初心，方得始终/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/12/08/参加Google开发者大会体验/" id="post_nav-older" class="next-content">
+        <a href="/2017/05/09/使用Jsoup抓取干货集中营闲读数据/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
