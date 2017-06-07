@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Title -->
+    
+    <title>
+        从java到Kotiln | 达令哥的博客
+    </title>
+    
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+    
+    <!-- Meta & INfo -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="达令哥">
+    <meta name="description" content="有过那样一个我，那样的生活过。他的身影印在这个时代里。我看见他的传说。">
+    <meta name="keywords" content="达令哥">
+    
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+    
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="达令哥的博客">
+    
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://dalingge.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="从java到Kotiln | 达令哥的博客">
+    <meta property="og:description" content="有过那样一个我，那样的生活过。他的身影印在这个时代里。我看见他的传说。">
+    
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+        
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+    
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+	body, html{
+		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	}
+	
+    a{
+        color: #00838F
+    }
+    
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important
+    }
+    
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: #0097A7 !important
+    }
+    
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: #0097A7 !important
+    }
+    
+    .toTop{
+        background: #757575 !important
+    }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: #757575;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: #757575;
+	}
+
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: #757575;
+	}
+	
+	.post-toc a:hover{
+		color: #00838F;
+		text-decoration: underline;
+	}
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+	<script src="/js/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="/css/highlight/atelier-forest-light.css">
+	
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<link rel="stylesheet" href="/css/uc.css">');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+    
+    <!-- Custom Head -->
+    
+</head>
+	
+	
+
+    <body id="scheme-Paradox">
+
+		
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			
+			
+            <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+				
+                <!-- Top Anchor -->
+                <div id="top"></div>
+				
+				
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+				
+				
+                <!-- Post TOC -->
+
+    
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#打印日志"><span class="post-toc-number">1.</span> <span class="post-toc-text">打印日志</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常量与变量"><span class="post-toc-number">2.</span> <span class="post-toc-text">常量与变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#null声明"><span class="post-toc-number">3.</span> <span class="post-toc-text">null声明</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#空判断"><span class="post-toc-number">4.</span> <span class="post-toc-text">空判断</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字符串拼接"><span class="post-toc-number">5.</span> <span class="post-toc-text">字符串拼接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#换行"><span class="post-toc-number">6.</span> <span class="post-toc-text">换行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三元表达式"><span class="post-toc-number">7.</span> <span class="post-toc-text">三元表达式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类型判断和转换-声明式"><span class="post-toc-number">8.</span> <span class="post-toc-text">类型判断和转换 (声明式)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类型判断和转换-隐式"><span class="post-toc-number">9.</span> <span class="post-toc-text">类型判断和转换 (隐式)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多重条件"><span class="post-toc-number">10.</span> <span class="post-toc-text">多重条件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更灵活的case语句"><span class="post-toc-number">11.</span> <span class="post-toc-text">更灵活的case语句</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#for循环"><span class="post-toc-number">12.</span> <span class="post-toc-text">for循环</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更方便的集合操作"><span class="post-toc-number">13.</span> <span class="post-toc-text">更方便的集合操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#遍历"><span class="post-toc-number">14.</span> <span class="post-toc-text">遍历</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法定义"><span class="post-toc-number">15.</span> <span class="post-toc-text">方法定义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#带返回值的方法"><span class="post-toc-number">16.</span> <span class="post-toc-text">带返回值的方法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#无结束符号"><span class="post-toc-number">17.</span> <span class="post-toc-text">无结束符号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#constructor-构造器"><span class="post-toc-number">18.</span> <span class="post-toc-text">constructor 构造器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Get-Set-构造器"><span class="post-toc-number">19.</span> <span class="post-toc-text">Get Set 构造器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你需要知道一些比较重要的事"><span class="post-toc-number">19.1.</span> <span class="post-toc-text">你需要知道一些比较重要的事</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如果你觉得这个项目对你有帮助-heart"><span class="post-toc-number">19.2.</span> <span class="post-toc-text">如果你觉得这个项目对你有帮助 :heart:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#License"><span class="post-toc-number">19.3.</span> <span class="post-toc-text">License</span></a></li></ol></li></ol>
+		
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
+	
+		<!-- Custom Thumbnail -->
+		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/header/1110736-25da08f052608195.png)">
+	
+        <p class="article-headline-p">
+            从java到Kotiln
+        </p>
+    </div>
+
+	
+
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>达令哥</strong>
+        <span>5月 19, 2017</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+    
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Kotiln/">Kotiln</a>
+    </ul>
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    
+    
+    
+    <!-- Busuanzi Views -->
+    <a class="post_share-link" href="#">
+        <li class="mdl-menu__item">
+            <span id="busuanzi_container_page_pv">
+                <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+            </span>
+        </li>
+    </a>
+    
+    
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=从java到Kotiln&url=http://dalingge.com//2017/05/19/从Java到Kotlin/index.html&via=达令哥" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+    
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2017/05/19/从Java到Kotlin/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+    
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=从java到Kotiln&url=http://dalingge.com//2017/05/19/从Java到Kotlin/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+</ul>
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<p><a href="https://mindorks.com/open-source-projects" target="_blank" rel="external"><img src="https://img.shields.io/badge/mindorks-opensource-blue.svg" alt="Mindorks"></a><br><a href="https://mindorks.com/join-community" target="_blank" rel="external"><img src="https://img.shields.io/badge/join-community-blue.svg" alt="Mindorks Community"></a></p>
+<h2 id="打印日志"><a href="#打印日志" class="headerlink" title="打印日志"></a>打印日志</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">System.out.print(<span class="string">"Amit Shekhar"</span>);</div><div class="line">System.out.println(<span class="string">"Amit Shekhar"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">"Amit Shekhar"</span>)</div><div class="line">println(<span class="string">"Amit Shekhar"</span>)</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="常量与变量"><a href="#常量与变量" class="headerlink" title="常量与变量"></a>常量与变量</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String name = <span class="string">"Amit Shekhar"</span>;</div><div class="line"><span class="keyword">final</span> String name = <span class="string">"Amit Shekhar"</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Amit Shekhar"</span></div><div class="line"><span class="keyword">val</span> name = <span class="string">"Amit Shekhar"</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="null声明"><a href="#null声明" class="headerlink" title="null声明"></a>null声明</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String otherName;</div><div class="line">otherName = <span class="keyword">null</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> otherName : String?</div><div class="line">otherName = <span class="literal">null</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="空判断"><a href="#空判断" class="headerlink" title="空判断"></a>空判断</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (text != <span class="keyword">null</span>) &#123;</div><div class="line">    <span class="keyword">int</span> length = text.length();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">text?.let &#123;</div><div class="line">    <span class="keyword">val</span> length = text.length</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">String firstName = <span class="string">"Amit"</span>;</div><div class="line">String lastName = <span class="string">"Shekhar"</span>;</div><div class="line">String message = <span class="string">"My name is: "</span> + firstName + <span class="string">" "</span> + lastName;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> firstName = <span class="string">"Amit"</span></div><div class="line"><span class="keyword">val</span> lastName = <span class="string">"Shekhar"</span></div><div class="line"><span class="keyword">val</span> message = <span class="string">"My name is: <span class="subst">$firstName</span> <span class="subst">$lastName</span>"</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">String text = <span class="string">"First Line\n"</span> +</div><div class="line">              <span class="string">"Second Line\n"</span> +</div><div class="line">              <span class="string">"Third Line"</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> text = <span class="string">"""</span></div><div class="line">        |First Line</div><div class="line">        |Second Line</div><div class="line">        |Third Line</div><div class="line">        """.trimMargin()</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String text = x &gt; <span class="number">5</span> ? <span class="string">"x &gt; 5"</span> : <span class="string">"x &lt;= 5"</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> text = <span class="keyword">if</span> (x &gt; <span class="number">5</span>)</div><div class="line">              <span class="string">"x &gt; 5"</span></div><div class="line">           <span class="keyword">else</span> <span class="string">"x &lt;= 5"</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="类型判断和转换-声明式"><a href="#类型判断和转换-声明式" class="headerlink" title="类型判断和转换 (声明式)"></a>类型判断和转换 (声明式)</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (object <span class="keyword">instanceof</span> Car) &#123;</div><div class="line">&#125;</div><div class="line">Car car = (Car) object;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">object</span> <span class="keyword">is</span> Car) &#123;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> car = <span class="keyword">object</span> <span class="keyword">as</span> Car</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="类型判断和转换-隐式"><a href="#类型判断和转换-隐式" class="headerlink" title="类型判断和转换 (隐式)"></a>类型判断和转换 (隐式)</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (object <span class="keyword">instanceof</span> Car) &#123;</div><div class="line">   Car car = (Car) object;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">object</span> <span class="keyword">is</span> Car) &#123;</div><div class="line">   <span class="keyword">var</span> car = <span class="keyword">object</span> <span class="comment">// smart casting</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="多重条件"><a href="#多重条件" class="headerlink" title="多重条件"></a>多重条件</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (score &gt;= <span class="number">0</span> &amp;&amp; score &lt;= <span class="number">300</span>) &#123; &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (score <span class="keyword">in</span> <span class="number">0.</span><span class="number">.300</span>) &#123; &#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="更灵活的case语句"><a href="#更灵活的case语句" class="headerlink" title="更灵活的case语句"></a>更灵活的case语句</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> score = <span class="comment">// some score;</span></div><div class="line">String grade;</div><div class="line"><span class="keyword">switch</span> (score) &#123;</div><div class="line">    <span class="keyword">case</span> <span class="number">10</span>:</div><div class="line">    <span class="keyword">case</span> <span class="number">9</span>:</div><div class="line">        grade = <span class="string">"Excellent"</span>;</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="number">8</span>:</div><div class="line">    <span class="keyword">case</span> <span class="number">7</span>:</div><div class="line">    <span class="keyword">case</span> <span class="number">6</span>:</div><div class="line">        grade = <span class="string">"Good"</span>;</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="number">5</span>:</div><div class="line">    <span class="keyword">case</span> <span class="number">4</span>:</div><div class="line">        grade = <span class="string">"Ok"</span>;</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">    <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">    <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">        grade = <span class="string">"Fail"</span>;</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">default</span>:</div><div class="line">        grade = <span class="string">"Fail"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> score = <span class="comment">// some score</span></div><div class="line"><span class="keyword">var</span> grade = <span class="keyword">when</span> (score) &#123;</div><div class="line">    <span class="number">9</span>, <span class="number">10</span> -&gt; <span class="string">"Excellent"</span> </div><div class="line">    <span class="keyword">in</span> <span class="number">6.</span><span class="number">.8</span> -&gt; <span class="string">"Good"</span></div><div class="line">    <span class="number">4</span>, <span class="number">5</span> -&gt; <span class="string">"Ok"</span></div><div class="line">    <span class="keyword">in</span> <span class="number">1.</span><span class="number">.3</span> -&gt; <span class="string">"Fail"</span></div><div class="line">    <span class="keyword">else</span> -&gt; <span class="string">"Fail"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span> ; i++) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span> ; i++) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">10</span>; i &gt;= <span class="number">0</span> ; i--) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span> ; i+=<span class="number">2</span>) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">10</span>; i &gt;= <span class="number">0</span> ; i-=<span class="number">2</span>) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (String item : collection) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry: map.entrySet()) &#123; &#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1.</span><span class="number">.10</span>) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span> until <span class="number">10</span>) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">10</span> downTo <span class="number">0</span>) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1.</span><span class="number">.10</span> step <span class="number">2</span>) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">10</span> downTo <span class="number">1</span> step <span class="number">2</span>) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (item <span class="keyword">in</span> collection) &#123; &#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span> ((key, value) <span class="keyword">in</span> map) &#123; &#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="更方便的集合操作"><a href="#更方便的集合操作" class="headerlink" title="更方便的集合操作"></a>更方便的集合操作</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> List&lt;Integer&gt; listOfNumber = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>);</div><div class="line"></div><div class="line"><span class="keyword">final</span> Map&lt;Integer, String&gt; keyValue = <span class="keyword">new</span> HashMap&lt;Integer, String&gt;();</div><div class="line">map.put(<span class="number">1</span>, <span class="string">"Amit"</span>);</div><div class="line">map.put(<span class="number">2</span>, <span class="string">"Ali"</span>);</div><div class="line">map.put(<span class="number">3</span>, <span class="string">"Mindorks"</span>);</div><div class="line"></div><div class="line"><span class="comment">// Java 9</span></div><div class="line"><span class="keyword">final</span> List&lt;Integer&gt; listOfNumber = List.of(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>);</div><div class="line"></div><div class="line"><span class="keyword">final</span> Map&lt;Integer, String&gt; keyValue = Map.of(<span class="number">1</span>, <span class="string">"Amit"</span>,</div><div class="line">                                             <span class="number">2</span>, <span class="string">"Ali"</span>,</div><div class="line">                                             <span class="number">3</span>, <span class="string">"Mindorks"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">val</span> listOfNumber = listOf(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</div><div class="line"><span class="keyword">val</span> keyValue = mapOf(<span class="number">1</span> to <span class="string">"Amit"</span>,</div><div class="line">                     <span class="number">2</span> to <span class="string">"Ali"</span>,</div><div class="line">                     <span class="number">3</span> to <span class="string">"Mindorks"</span>)</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Java 7 and below</span></div><div class="line"><span class="keyword">for</span> (Car car : cars) &#123;</div><div class="line">  System.out.println(car.speed);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Java 8+</span></div><div class="line">cars.forEach(car -&gt; System.out.println(car.speed));</div><div class="line"></div><div class="line"><span class="comment">// Java 7 and below</span></div><div class="line"><span class="keyword">for</span> (Car car : cars) &#123;</div><div class="line">  <span class="keyword">if</span> (car.speed &gt; <span class="number">100</span>) &#123;</div><div class="line">    System.out.println(car.speed);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Java 8+</span></div><div class="line">cars.stream().filter(car -&gt; car.speed &gt; <span class="number">100</span>).forEach(car -&gt; System.out.println(car.speed));</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">cars.forEach &#123;</div><div class="line">    println(it.speed)</div><div class="line">&#125;</div><div class="line"></div><div class="line">cars.filter &#123; it.speed &gt; <span class="number">100</span> &#125;</div><div class="line">      .forEach &#123; println(it.speed)&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="方法定义"><a href="#方法定义" class="headerlink" title="方法定义"></a>方法定义</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">doSomething</span><span class="params">()</span> </span>&#123;</div><div class="line">   <span class="comment">// logic here</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">doSomething</span><span class="params">(<span class="keyword">int</span>... numbers)</span> </span>&#123;</div><div class="line">   <span class="comment">// logic here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">doSomething</span><span class="params">()</span></span> &#123;</div><div class="line">   <span class="comment">// logic here</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">doSomething</span><span class="params">(<span class="keyword">vararg</span> numbers: <span class="type">Int</span>)</span></span> &#123;</div><div class="line">   <span class="comment">// logic here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="带返回值的方法"><a href="#带返回值的方法" class="headerlink" title="带返回值的方法"></a>带返回值的方法</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getScore</span><span class="params">()</span> </span>&#123;</div><div class="line">   <span class="comment">// logic here</span></div><div class="line">   <span class="keyword">return</span> score;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getScore</span><span class="params">()</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">   <span class="comment">// logic here</span></div><div class="line">   <span class="keyword">return</span> score</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// as a single-expression function</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getScore</span><span class="params">()</span></span>: <span class="built_in">Int</span> = score</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="无结束符号"><a href="#无结束符号" class="headerlink" title="无结束符号"></a>无结束符号</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">getScore</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</div><div class="line">    <span class="comment">// logic here</span></div><div class="line">    <span class="keyword">return</span> <span class="number">2</span> * value;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getScore</span><span class="params">(value: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">   <span class="comment">// logic here</span></div><div class="line">   <span class="keyword">return</span> <span class="number">2</span> * value</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// as a single-expression function</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getScore</span><span class="params">(value: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> = <span class="number">2</span> * value</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="constructor-构造器"><a href="#constructor-构造器" class="headerlink" title="constructor 构造器"></a>constructor 构造器</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Utils</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Utils</span><span class="params">()</span> </span>&#123; </div><div class="line">      <span class="comment">// This utility class is not publicly instantiable </span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getScore</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">2</span> * value;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Utils</span> <span class="keyword">private</span> <span class="keyword">constructor</span></span>() &#123;</div><div class="line"></div><div class="line">    <span class="keyword">companion</span> <span class="keyword">object</span> &#123;</div><div class="line">    </div><div class="line">        <span class="function"><span class="keyword">fun</span> <span class="title">getScore</span><span class="params">(value: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">2</span> * value</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// other way is also there</span></div><div class="line"></div><div class="line"><span class="keyword">object</span> Utils &#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">getScore</span><span class="params">(value: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">2</span> * value</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="Get-Set-构造器"><a href="#Get-Set-构造器" class="headerlink" title="Get Set 构造器"></a>Get Set 构造器</h2><ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Developer</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Developer</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.age = age;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == o) <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">        <span class="keyword">if</span> (o == <span class="keyword">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"></div><div class="line">        Developer developer = (Developer) o;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (age != developer.age) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">        <span class="keyword">return</span> name != <span class="keyword">null</span> ? name.equals(developer.name) : developer.name == <span class="keyword">null</span>;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> result = name != <span class="keyword">null</span> ? name.hashCode() : <span class="number">0</span>;</div><div class="line">        result = <span class="number">31</span> * result + age;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"Developer&#123;"</span> +</div><div class="line">                <span class="string">"name='"</span> + name + <span class="string">'\''</span> +</div><div class="line">                <span class="string">", age="</span> + age +</div><div class="line">                <span class="string">'&#125;'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">data</span> <span class="class"><span class="keyword">class</span> <span class="title">Developer</span></span>(<span class="keyword">val</span> name: String, <span class="keyword">val</span> age: <span class="built_in">Int</span>)</div></pre></td></tr></table></figure>
+<ul>
+<li>Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Utils</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Utils</span><span class="params">()</span> </span>&#123; </div><div class="line">      <span class="comment">// This utility class is not publicly instantiable </span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">triple</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">3</span> * value;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> result = Utils.triple(<span class="number">3</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>Kotlin</li>
+</ul>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="built_in">Int</span>.<span class="title">triple</span><span class="params">()</span></span>: <span class="built_in">Int</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span> * <span class="number">3</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> result = <span class="number">3.</span>triple()</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="你需要知道一些比较重要的事"><a href="#你需要知道一些比较重要的事" class="headerlink" title="你需要知道一些比较重要的事"></a>你需要知道一些比较重要的事</h3><ul>
+<li><a href="https://mindorks.com/blog/learn-kotlin-lateinit-vs-lazy" target="_blank" rel="external">Learn Kotlin - lateinit vs lazy</a></li>
+<li><a href="https://mindorks.com/blog/learn-kotlin-apply-vs-with" target="_blank" rel="external">Learn Kotlin - apply vs with</a></li>
+<li><a href="https://mindorks.com/blog/learn-kotlin-data-class" target="_blank" rel="external">Learn Kotlin - 定义实体对象</a></li>
+<li>[Learn Kotlin - 声明式解构(<a href="https://mindorks.com/blog/learn-kotlin-destructuring-declarations" target="_blank" rel="external">https://mindorks.com/blog/learn-kotlin-destructuring-declarations</a>)</li>
+<li>[Learn Kotlin - Sealed Classes](<a href="https://mindorks.com/blog/learn-kotlin-sealed-classes" target="_blank" rel="external">https://mindorks.com/blog/learn-kotlin-sealed-classes</a></li>
+</ul>
+<h3 id="如果你觉得这个项目对你有帮助-heart"><a href="#如果你觉得这个项目对你有帮助-heart" class="headerlink" title="如果你觉得这个项目对你有帮助 :heart:"></a>如果你觉得这个项目对你有帮助 :heart:</h3><ul>
+<li>你可以通过点击 :star:表示支持  :v:</li>
+</ul>
+<p><a href="https://mindorks.com/open-source-projects" target="_blank" rel="external">Check out Mindorks awesome open source projects here</a></p>
+<h3 id="License"><a href="#License" class="headerlink" title="License"></a>License</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">   Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED</div><div class="line"></div><div class="line">   Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</div><div class="line">   you may not use this file except in compliance with the License.</div><div class="line">   You may obtain a copy of the License at</div><div class="line"></div><div class="line">       http://www.apache.org/licenses/LICENSE-2.0</div><div class="line"></div><div class="line">   Unless required by applicable law or agreed to in writing, software</div><div class="line">   distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</div><div class="line">   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</div><div class="line">   See the License for the specific language governing permissions and</div><div class="line">   limitations under the License.</div></pre></td></tr></table></figure>
+
+	
+	
+	
+	
+</div>
+				
+				
+
+                <!-- Post Comments -->
+                
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+            data-thread-key="2017/05/19/从Java到Kotlin/" 
+            data-url="http://dalingge.com/2017/05/19/从Java到Kotlin/"
+            data-title="从java到Kotiln"></div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/05/19/开始修炼Kotil/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
+
+				
+				
+					<!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay "></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+	<div id="sidebar-main">
+	    <!-- Sidebar Header -->
+		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_avatar.png" alt="达令哥's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        445850053@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+		<!-- Sidebar Navigation  -->
+		<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+			
+                <li>
+                    <a href="mailto:445850053@qq.com" target="_blank" title="Email Me">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+<!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+-->
+
+	
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">四月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/03/">三月 2016<span class="sidebar_archives-count">1</span></a>
+        </ul>
+    </li>
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+	
+		<li>
+			<a href="/tags/" title="标签云">
+				标签云
+			</a>
+		</li>
+	
+		<li>
+			<a href="/links/" title="友情链接">
+				友情链接
+			</a>
+		</li>
+	
+		<li>
+			<a href="/about" title="关于">
+				关于
+			</a>
+		</li>
+	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+             文章总数
+             <span class="sidebar-badge">13</span>
+        </a>
+    </li>
+</ul>
+
+		<!-- Sidebar Divider -->
+		<div class="sidebar-divider"></div>
+
+		<!-- Sidebar Footer -->
+		<!-- 
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持。 :) 
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		主题 - Material
+		<span class="sidebar-badge badge-circle">i</span>
+	</div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		sidebar.help
+		<span class="mdl-button__ripple-container">
+			<span class="mdl-ripple"></span>
+		</span>
+	</div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+	</div>
+    
+    <!-- Sidebar Sponsor -->
+    
+
+
+</aside>
+
+				
+				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+				
+				
+				<!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+	
+	
+		<!-- Paradox Footer Left Section -->
+		<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+    
+    
+    <!-- Facebook -->
+    
+    <a href="https://zh-cn.facebook.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-facebook.png);">
+        <span class="visuallyhidden">Facebook</span>
+    </button></a>
+    
+    
+    <!-- Google + -->
+    
+    <a href="https://www.google.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-gplus.png);">
+        <span class="visuallyhidden">Google Plus</span>
+    </button></a>
+    
+    
+    <!-- Weibo -->
+    
+    <a href="http://weibo.com/u/2208609043" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-weibo.png);">
+        <span class="visuallyhidden">Weibo</span>
+    </button></a>
+    
+    
+    <!-- Instagram -->
+    
+    <a href="https://www.instagram.com/" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-instagram.png);">
+        <span class="visuallyhidden">Instagram</span>
+    </button></a>
+    
+    
+    <!-- Tumblr -->
+    
+    
+    
+    <!-- Github -->
+    
+    <a href="https://github.com/dalingge" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+        <span class="visuallyhidden">Github</span>
+    </button></a>
+    
+</div>
+
+
+		<!--Copyright-->
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;达令哥的博客</div>
+
+		<!-- Paradox Footer Right Section -->
+
+		<!-- 
+		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+		It will not impact the appearance and can give developers a lot of support :)
+
+		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+		它不会影响美观并可以给开发者很大的支持。 :) 
+		-->
+
+		<div class="mdl-mini-footer--right-section">
+			<div>
+				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+			</div>
+		</div>
+	
+    
+</footer>
+                
+				<!-- Import File -->
+<script src="/js/highlight.min.js"></script>
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    <!-- 多说公共 js 代码 start -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dalingge"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'https://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共 js 代码 end -->
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+	<script>
+	var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length <= 0) {
+                    return;
+                }
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ data_title;
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out characters
+                            var start = first_occur - 6;
+                            var end = first_occur + 6;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 10;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substr(start, end); 
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<em class=\"search-keyword\">"+keyword+"</em>");
+                            })
+                            str += "<p class=\"search-result\">" + match_content +"...</p>" +"</a>";
+                        }
+                    }
+                })
+                $resultContent.innerHTML = str;
+            })
+        }
+    })
+}
+</script>
+
+	<script>
+        var inputArea = document.querySelector("#search");
+        var getSearchFile = function(){
+            var path = "search.xml";
+            searchFunc(path, 'search', 'local-search-result');
+        }
+
+        inputArea.onfocus = function(){ getSearchFile() }
+	</script>
+
+
+<!-- Window Load-->
+<script>
+    $(window).load(function() {
+        // Post_Toc parent position fixed
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>
+
+<!-- MathJax Load-->
+
+            </main>
+        </div>
+		
+    </body>
+		
+	
+</html>
