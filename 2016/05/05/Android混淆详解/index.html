@@ -52,8 +52,12 @@
     <![endif]-->
     
     <!-- Import CSS -->
-    <link rel="stylesheet" href="/css/material.min.css">
-    <link rel="stylesheet" href="/css/style.min.css">
+    
+<link rel="stylesheet" href="/css/material.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.min.css">
+
     <!-- Config CSS -->
 
 
@@ -155,22 +159,28 @@
         }
     </style>
 
-	<script src="/js/jquery.min.js"></script>
 	
-	<link rel="stylesheet" href="/css/highlight/atelier-forest-light.css">
+<script src="/js/jquery.min.js"></script>
+
+	
+	
+<link rel="stylesheet" href="/css/highlight/atelier-forest-light.css">
+
 	
 	<!-- UC Browser Compatible-->
 	<script>
 		var agent = navigator.userAgent.toLowerCase();
 		if(agent.indexOf('ucbrowser')>0) {
-			document.write('<link rel="stylesheet" href="/css/uc.css">');
+			document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
 		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
 		}
 	</script>
     
     <!-- Custom Head -->
     
-</head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 	
 	
 
@@ -217,7 +227,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tag-未整理"><span class="post-toc-number">1.</span> <span class="post-toc-text">Tag 未整理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何启用ProGuard"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何启用ProGuard</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何配置ProGuard"><span class="post-toc-number">3.</span> <span class="post-toc-text">如何配置ProGuard</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#部分语法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">部分语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Demo实例"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Demo实例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何查看ProGuard输出文件"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">如何查看ProGuard输出文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#资源混淆"><span class="post-toc-number">4.</span> <span class="post-toc-text">资源混淆</span></a></li></ol>
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tag-%E6%9C%AA%E6%95%B4%E7%90%86"><span class="post-toc-number">1.</span> <span class="post-toc-text">Tag 未整理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E5%90%AF%E7%94%A8ProGuard"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何启用ProGuard</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEProGuard"><span class="post-toc-number">3.</span> <span class="post-toc-text">如何配置ProGuard</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%83%A8%E5%88%86%E8%AF%AD%E6%B3%95"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">部分语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Demo%E5%AE%9E%E4%BE%8B"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Demo实例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8BProGuard%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">如何查看ProGuard输出文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%B5%84%E6%BA%90%E6%B7%B7%E6%B7%86"><span class="post-toc-number">4.</span> <span class="post-toc-text">资源混淆</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -278,7 +288,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Android/">Android</a>
+        <a class="post_tag-none-link" href="/tags/Android/" rel="tag">Android</a>
     </ul>
     
     <!-- Share -->
@@ -302,21 +312,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android混淆详解&url=http://dalingge.com//2016/05/05/Android混淆详解/index.html&via=达令哥" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android混淆详解&url=http://dalingge.com//2016/05/05/Android%E6%B7%B7%E6%B7%86%E8%AF%A6%E8%A7%A3/index.html&via=达令哥" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2016/05/05/Android混淆详解/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2016/05/05/Android%E6%B7%B7%E6%B7%86%E8%AF%A6%E8%A7%A3/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android混淆详解&url=http://dalingge.com//2016/05/05/Android混淆详解/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android混淆详解&url=http://dalingge.com//2016/05/05/Android%E6%B7%B7%E6%B7%86%E8%AF%A6%E8%A7%A3/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -329,14 +339,15 @@
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
 		<p>当前是有些工具比如apktool，dextojar等是可以对我们android安装包进行反编译，获得源码的。为了减少被别人破解，导致源码泄露，程序被别人盗取代码，等等。我们需要对代码进行混淆，android的sdk中为我们提供了ProGrard这个工具，可以对代码进行混淆（一般是用无意义的名字来重命名），以及去除没有使用到的代码，对程序进行优化和压缩，这样可以增加你想的难度。</p>
-<h2 id="Tag-未整理"><a href="#Tag-未整理" class="headerlink" title="Tag 未整理"></a>Tag 未整理</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-keepnames <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">packagename</span>.<span class="title">ClassName</span>$* </span>&#123;</div><div class="line">    <span class="keyword">public</span> &lt;fields&gt;;</div><div class="line">    <span class="keyword">public</span> &lt;methods&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Tag-未整理"><a href="#Tag-未整理" class="headerlink" title="Tag 未整理"></a>Tag 未整理</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-keepnames <span class="keyword">class</span> <span class="title class_">com</span>.packagename.ClassName$* &#123;</span><br><span class="line">    <span class="keyword">public</span> &lt;fields&gt;;</span><br><span class="line">    <span class="keyword">public</span> &lt;methods&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这种方式可以禁止混淆内部类。</p>
-<h2 id="如何启用ProGuard"><a href="#如何启用ProGuard" class="headerlink" title="如何启用ProGuard"></a>如何启用ProGuard</h2><p>在build.gradle中进行配置<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">    buildTypes &#123;</div><div class="line">        release &#123;</div><div class="line">            <span class="function">runProguard <span class="keyword">true</span></span></div><div class="line">            proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>，'proguard-rules.pro'</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="如何启用ProGuard"><a href="#如何启用ProGuard" class="headerlink" title="如何启用ProGuard"></a>如何启用ProGuard</h2><p>在build.gradle中进行配置</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    buildTypes &#123;</span><br><span class="line">        release &#123;</span><br><span class="line">            runProguard <span class="literal">true</span></span><br><span class="line">            <span class="type">proguardFiles</span> <span class="title function_">getDefaultProguardFile</span><span class="params">(<span class="string">&#x27;proguard-android.txt&#x27;</span>)</span>，<span class="string">&#x27;proguard-rules.pro&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如上面的代码所示，在release打包时就会按照我们的配置进行混淆，注意，在我们平时的debug时是不会进行混淆的。</p>
-<h2 id="如何配置ProGuard"><a href="#如何配置ProGuard" class="headerlink" title="如何配置ProGuard"></a>如何配置ProGuard</h2><p>具体详情请查看官网：<a href="http://proguard.sourceforge.net/" target="_blank" rel="external">http://proguard.sourceforge.net/</a></p>
+<h2 id="如何配置ProGuard"><a href="#如何配置ProGuard" class="headerlink" title="如何配置ProGuard"></a>如何配置ProGuard</h2><p>具体详情请查看官网：<a href="http://proguard.sourceforge.net/">http://proguard.sourceforge.net/</a></p>
 <h3 id="部分语法"><a href="#部分语法" class="headerlink" title="部分语法"></a>部分语法</h3><p>后面的文件名，类名，或者包名等可以使用占位符代替<br>“?”表示一个字符 可以匹配多个字符，但是如果是一个类，不会匹配其前面的包名<br>“*”可以匹配多个字符，会匹配前面的包名。</p>
 <ul>
-<li>输入输出选项<ul>
+<li>输入输出选项</li>
 <li>-include filename 从给定的文件中读取配置参数</li>
 <li>-injars class_path输入(即使用的) jar文件路径</li>
 <li>-outjars class_path输出 jar 路径</li>
@@ -345,9 +356,7 @@
 <li>-dontskipnonpubliclibraryclasses不跳过(混淆) jars中的 非public classes默认选项</li>
 <li>-dontskipnonpubliclibraryclassmembers不跳过 jars中的非public classes的members</li>
 <li>-keepdirectories [directory_filter]指定目录 keep 在 out jars中</li>
-</ul>
-</li>
-<li>保持不变的选项（混淆不进行处理的内容）<ul>
+<li>保持不变的选项（混淆不进行处理的内容）</li>
 <li>-keep {Modifier} {class_specification}保护指定的类文件和类的成员</li>
 <li>-keepclassmembers {modifier} {class_specification}保护指定类的成员，如果此类受到保护他们会保护的更好</li>
 <li>-keepclasseswithmembers {class_specification}保护指定的类和类的成员，但条件是所有指定的类和类成员是要存在。</li>
@@ -355,23 +364,17 @@
 <li>-keepclassmembernames {class_specification}保护指定的类的成员的名称（如果他们不会压缩步骤中删除）</li>
 <li>-keepclasseswithmembernames {class_specification}保护指定的类和类的成员的名称，如果所有指定的类成员出席（在压缩步骤之后）</li>
 <li>-printseeds {filename} 列出类和类的成员-keep选项的清单，标准输出到给定的文件</li>
-</ul>
-</li>
-<li>压缩选项<ul>
+<li>压缩选项</li>
 <li>-dontshrink不启用shrink。shrink操作默认启用，主要的作用是将一些无效代码给移除，即没有被显示调用的代码。</li>
 <li>-printusage [filename]打印被移除的代码，在标准输出</li>
 <li>-whyareyoukeeping class_specification打印 在shrink过程中 为什么有些代码被 keep</li>
-</ul>
-</li>
-<li>优化选项<ul>
+<li>优化选项</li>
 <li>-dontoptimize 该选项表示不启用。optimization，默认启用当不使用该选项时，下面的才有效</li>
 <li>-optimizations optimization_filter 根据optimization_filter指定要优化的文件</li>
 <li>-optimizationpasses n 优化数量 n</li>
 <li>-assumenosideeffects class_specification 优化时允许访问并修改类和类的成员的 访问修饰符，可能作用域会变大。</li>
 <li>-mergeinterfacesaggressively 合并接口，即使它们的实现类未实现合并后接口的所有方法。</li>
-</ul>
-</li>
-<li>混淆选项<ul>
+<li>混淆选项</li>
 <li>-dontobfuscate 不混淆</li>
 <li>-printmapping [filename] 打印 映射旧名到新名</li>
 <li>-applymapping filename 打印相关</li>
@@ -386,9 +389,7 @@
 <li>-repackageclasses [package_name] 将包里的类混淆成n个再重新打包到一个统一的package中会覆盖flattenpackagehierarchy选项</li>
 <li>-keepattributes [attribute_filter] 混淆时可能被移除下面这些东西，如果想保留，需要用该选项。“Annotation、Exceptions, Signature, Deprecated, SourceFile, SourceDir,LineNumberTable” 预校验选项</li>
 <li>-dontpreverify 不预校验，默认选项</li>
-</ul>
-</li>
-<li>通用选项<ul>
+<li>通用选项</li>
 <li>-verbose 打印日志</li>
 <li>-dontnote [class_filter] 不打印某些错误</li>
 <li>-dontwarn [class_filter] 不打印警告信息</li>
@@ -396,10 +397,9 @@
 <li>-printconfiguration [filename] 打印配置文件</li>
 <li>-dump [filename] 指定打印类结构</li>
 </ul>
-</li>
-</ul>
-<h3 id="Demo实例"><a href="#Demo实例" class="headerlink" title="Demo实例"></a>Demo实例</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div></pre></td><td class="code"><pre><div class="line">##--- For:android默认 ---</div><div class="line">-optimizationpasses 5  # 指定代码的压缩级别</div><div class="line">-allowaccessmodification #优化时允许访问并修改有修饰符的类和类的成员</div><div class="line">-dontusemixedcaseclassnames  # 是否使用大小写混合</div><div class="line">-dontskipnonpubliclibraryclasses  # 是否混淆第三方jar</div><div class="line">-dontpreverify  # 混淆时是否做预校验</div><div class="line">-verbose    # 混淆时是否记录日志</div><div class="line">-ignorewarnings  # 忽略警告，避免打包时某些警告出现</div><div class="line">-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field/*,!class/merging/*  # 混淆时所采用的算法</div><div class="line"></div><div class="line">-keepattributes *Annotation*</div><div class="line">-keep public class com.google.vending.licensing.ILicensingService</div><div class="line">-keep public class com.android.vending.licensing.ILicensingService</div><div class="line">-keepclasseswithmembernames class * &#123; # 保持 native 方法不被混淆</div><div class="line">    native &lt;methods&gt;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclassmembers public class * extends android.view.View &#123;</div><div class="line">   void set*(***);</div><div class="line">   *** get*();</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclassmembers class * extends android.app.Activity &#123;</div><div class="line">   public void *(android.view.View);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclassmembers enum * &#123;  # 保持枚举 enum 类不被混淆</div><div class="line">    public static **[] values();</div><div class="line">    public static ** valueOf(java.lang.String);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keep class * implements android.os.Parcelable &#123; # 保持 Parcelable 不被混淆</div><div class="line">  public static final android.os.Parcelable$Creator *;</div><div class="line">&#125;</div><div class="line"></div><div class="line">-keepclassmembers class **.R$* &#123; #不混淆R文件</div><div class="line">    public static &lt;fields&gt;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">-dontwarn android.support.**</div><div class="line">##--- End android默认 ---</div><div class="line"></div><div class="line">##--- For:不能被混淆的 ---</div><div class="line">-keep public class * extends android.app.Activity</div><div class="line">-keep public class * extends android.app.Fragment</div><div class="line">-keep public class * extends android.app.Application</div><div class="line">-keep public class * extends android.app.Service</div><div class="line">-keep public class * extends android.content.BroadcastReceiver</div><div class="line">-keep public class * extends android.content.ContentProvider</div><div class="line">-keep public class * extends android.app.backup.BackupAgentHelper</div><div class="line">-keep public class * extends android.preference.Preference</div><div class="line"></div><div class="line">##--- For:保持自定义控件类不被混淆 ---</div><div class="line">-keepclasseswithmembers class * &#123;</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet);</div><div class="line">&#125;</div><div class="line">-keepclasseswithmembers class * &#123;</div><div class="line">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet, int);</div><div class="line">&#125;</div><div class="line">##--- For:android-support-v4 ---</div><div class="line">-dontwarn android.support.v4.**</div><div class="line">-keep class android.support.v4.** &#123; *; &#125;</div><div class="line">-keep interface android.support.v4.app.** &#123; *; &#125;</div><div class="line">-keep class * extends android.support.v4.** &#123; *; &#125;</div><div class="line">-keep public class * extends android.support.v4.**</div><div class="line">-keep public class * extends android.support.v4.widget</div><div class="line">-keep class * extends android.support.v4.app.** &#123;*;&#125;</div><div class="line">-keep class * extends android.support.v4.view.** &#123;*;&#125;</div><div class="line"></div><div class="line">##--- For:Serializable ---</div><div class="line">-keep class * implements java.io.Serializable &#123;*;&#125;</div><div class="line">-keepnames class * implements java.io.Serializable</div><div class="line">-keepclassmembers class * implements java.io.Serializable &#123;*;&#125;</div><div class="line"></div><div class="line">##--- For:Gson ---</div><div class="line">-keepattributes *Annotation*</div><div class="line">-keep class sun.misc.Unsafe &#123; *; &#125;</div><div class="line">-keep class com.idea.fifaalarmclock.entity.***</div><div class="line">-keep class com.google.gson.stream.** &#123; *; &#125;</div><div class="line"></div><div class="line">##--- For:Remove log ---</div><div class="line">-assumenosideeffects class android.util.Log &#123;</div><div class="line">    public static boolean isLoggable(java.lang.String, int);</div><div class="line">    public static int v(...);</div><div class="line">    public static int i(...);</div><div class="line">    public static int w(...);</div><div class="line">    public static int d(...);</div><div class="line">    public static int e(...);</div><div class="line">&#125;</div><div class="line"></div><div class="line">##--- For:attributes(未启用) ---</div><div class="line">#-keepattributes SourceFile,LineNumberTable # 保持反编译工具能看到代码的行数，以及release包安装后出现异常信息可以知道在哪行代码出现异常，建议不启用</div><div class="line">-keepattributes *Annotation* #使用注解</div><div class="line">-keepattributes Signature #过滤泛型  出现类型转换错误时，启用这个</div><div class="line">#-keepattributes *Exceptions*,EnclosingMethod  #没试过，未知效果</div></pre></td></tr></table></figure>
-<h3 id="如何查看ProGuard输出文件"><a href="#如何查看ProGuard输出文件" class="headerlink" title="如何查看ProGuard输出文件"></a>如何查看ProGuard输出文件</h3><p>混淆之后，会给我们输出一些文件，在gradle方式下是在/build/proguard/目录下，ant是在/bin/proguard目录，eclipse构建在/proguard目录像。 分别有以下文件：</p>
+<h3 id="Demo实例"><a href="#Demo实例" class="headerlink" title="Demo实例"></a>Demo实例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">##--- For:android默认 ---</span><br><span class="line">-optimizationpasses <span class="number">5</span>  # 指定代码的压缩级别</span><br><span class="line">-allowaccessmodification #优化时允许访问并修改有修饰符的类和类的成员</span><br><span class="line">-dontusemixedcaseclassnames  # 是否使用大小写混合</span><br><span class="line">-dontskipnonpubliclibraryclasses  # 是否混淆第三方jar</span><br><span class="line">-dontpreverify  # 混淆时是否做预校验</span><br><span class="line">-verbose    # 混淆时是否记录日志</span><br><span class="line">-ignorewarnings  # 忽略警告，避免打包时某些警告出现</span><br><span class="line">-optimizations !code/simplification/arithmetic,!code/simplification/cast,!field<span class="comment">/*,!class/merging/*  # 混淆时所采用的算法</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keepattributes *Annotation*</span></span><br><span class="line"><span class="comment">-keep public class com.google.vending.licensing.ILicensingService</span></span><br><span class="line"><span class="comment">-keep public class com.android.vending.licensing.ILicensingService</span></span><br><span class="line"><span class="comment">-keepclasseswithmembernames class * &#123; # 保持 native 方法不被混淆</span></span><br><span class="line"><span class="comment">    native &lt;methods&gt;;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keepclassmembers public class * extends android.view.View &#123;</span></span><br><span class="line"><span class="comment">   void set*(***);</span></span><br><span class="line"><span class="comment">   *** get*();</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keepclassmembers class * extends android.app.Activity &#123;</span></span><br><span class="line"><span class="comment">   public void *(android.view.View);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keepclassmembers enum * &#123;  # 保持枚举 enum 类不被混淆</span></span><br><span class="line"><span class="comment">    public static **[] values();</span></span><br><span class="line"><span class="comment">    public static ** valueOf(java.lang.String);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keep class * implements android.os.Parcelable &#123; # 保持 Parcelable 不被混淆</span></span><br><span class="line"><span class="comment">  public static final android.os.Parcelable$Creator *;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-keepclassmembers class **.R$* &#123; #不混淆R文件</span></span><br><span class="line"><span class="comment">    public static &lt;fields&gt;;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-dontwarn android.support.**</span></span><br><span class="line"><span class="comment">##--- End android默认 ---</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">##--- For:不能被混淆的 ---</span></span><br><span class="line"><span class="comment">-keep public class * extends android.app.Activity</span></span><br><span class="line"><span class="comment">-keep public class * extends android.app.Fragment</span></span><br><span class="line"><span class="comment">-keep public class * extends android.app.Application</span></span><br><span class="line"><span class="comment">-keep public class * extends android.app.Service</span></span><br><span class="line"><span class="comment">-keep public class * extends android.content.BroadcastReceiver</span></span><br><span class="line"><span class="comment">-keep public class * extends android.content.ContentProvider</span></span><br><span class="line"><span class="comment">-keep public class * extends android.app.backup.BackupAgentHelper</span></span><br><span class="line"><span class="comment">-keep public class * extends android.preference.Preference</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">##--- For:保持自定义控件类不被混淆 ---</span></span><br><span class="line"><span class="comment">-keepclasseswithmembers class * &#123;</span></span><br><span class="line"><span class="comment">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">-keepclasseswithmembers class * &#123;</span></span><br><span class="line"><span class="comment">    public &lt;init&gt;(android.content.Context, android.util.AttributeSet, int);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">##--- For:android-support-v4 ---</span></span><br><span class="line"><span class="comment">-dontwarn android.support.v4.**</span></span><br><span class="line"><span class="comment">-keep class android.support.v4.** &#123; *; &#125;</span></span><br><span class="line"><span class="comment">-keep interface android.support.v4.app.** &#123; *; &#125;</span></span><br><span class="line"><span class="comment">-keep class * extends android.support.v4.** &#123; *; &#125;</span></span><br><span class="line"><span class="comment">-keep public class * extends android.support.v4.**</span></span><br><span class="line"><span class="comment">-keep public class * extends android.support.v4.widget</span></span><br><span class="line"><span class="comment">-keep class * extends android.support.v4.app.** &#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keep class * extends android.support.v4.view.** &#123;*;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">##--- For:Serializable ---</span></span><br><span class="line"><span class="comment">-keep class * implements java.io.Serializable &#123;*;&#125;</span></span><br><span class="line"><span class="comment">-keepnames class * implements java.io.Serializable</span></span><br><span class="line"><span class="comment">-keepclassmembers class * implements java.io.Serializable &#123;*;&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">##--- For:Gson ---</span></span><br><span class="line"><span class="comment">-keepattributes *Annotation*</span></span><br><span class="line"><span class="comment">-keep class sun.misc.Unsafe &#123; *; &#125;</span></span><br><span class="line"><span class="comment">-keep class com.idea.fifaalarmclock.entity.***</span></span><br><span class="line"><span class="comment">-keep class com.google.gson.stream.** &#123; *; &#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">##--- For:Remove log ---</span></span><br><span class="line"><span class="comment">-assumenosideeffects class android.util.Log &#123;</span></span><br><span class="line"><span class="comment">    public static boolean isLoggable(java.lang.String, int);</span></span><br><span class="line"><span class="comment">    public static int v(...);</span></span><br><span class="line"><span class="comment">    public static int i(...);</span></span><br><span class="line"><span class="comment">    public static int w(...);</span></span><br><span class="line"><span class="comment">    public static int d(...);</span></span><br><span class="line"><span class="comment">    public static int e(...);</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">##--- For:attributes(未启用) ---</span></span><br><span class="line"><span class="comment">#-keepattributes SourceFile,LineNumberTable # 保持反编译工具能看到代码的行数，以及release包安装后出现异常信息可以知道在哪行代码出现异常，建议不启用</span></span><br><span class="line"><span class="comment">-keepattributes *Annotation* #使用注解</span></span><br><span class="line"><span class="comment">-keepattributes Signature #过滤泛型  出现类型转换错误时，启用这个</span></span><br><span class="line"><span class="comment">#-keepattributes *Exceptions*,EnclosingMethod  #没试过，未知效果</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="如何查看ProGuard输出文件"><a href="#如何查看ProGuard输出文件" class="headerlink" title="如何查看ProGuard输出文件"></a>如何查看ProGuard输出文件</h3><p>混淆之后，会给我们输出一些文件，在gradle方式下是在&#x2F;build&#x2F;proguard&#x2F;目录下，ant是在&#x2F;bin&#x2F;proguard目录，eclipse构建在&#x2F;proguard目录像。 分别有以下文件：</p>
 <ul>
 <li>dump.txt 描述apk文件中所有类文件间的内部结构。</li>
 <li>mapping.txt 列出了原始的类，方法，和字段名与混淆后代码之间的映射。</li>
@@ -408,8 +408,8 @@
 </ul>
 <p>当我们发布的release版本的程序出现bug时，可以通过以上文件（特别时mapping.txt）文件找到错误原始的位置，进行bug修改。 同时，可能一开始的proguard配置有错误，也可以通过错误日志，根据这些文件，找到哪些文件不应该混淆，从而修改proguard的配置。</p>
 <h2 id="资源混淆"><a href="#资源混淆" class="headerlink" title="资源混淆"></a>资源混淆</h2><ul>
-<li>美团 <a href="http://tech.meituan.com/mt-android-resource-obfuscation.html" target="_blank" rel="external">http://tech.meituan.com/mt-android-resource-obfuscation.html</a></li>
-<li>微信:<a href="http://mp.weixin.qq.com/s?biz=MzAwNDY1ODY2OQ==&amp;mid=208135658&amp;idx=1&amp;sn=ac9bd6b4927e9e82f9fa14e396183a8f&amp;scene=0#rd" target="_blank" rel="external">http://mp.weixin.qq.com/s?biz=MzAwNDY1ODY2OQ==&amp;mid=208135658&amp;idx=1&amp;sn=ac9bd6b4927e9e82f9fa14e396183a8f&amp;scene=0#rd</a></li>
+<li>美团 <a href="http://tech.meituan.com/mt-android-resource-obfuscation.html">http://tech.meituan.com/mt-android-resource-obfuscation.html</a></li>
+<li>微信:<a href="http://mp.weixin.qq.com/s?biz=MzAwNDY1ODY2OQ==&mid=208135658&idx=1&sn=ac9bd6b4927e9e82f9fa14e396183a8f&scene=0#rd">http://mp.weixin.qq.com/s?biz=MzAwNDY1ODY2OQ==&amp;mid=208135658&amp;idx=1&amp;sn=ac9bd6b4927e9e82f9fa14e396183a8f&amp;scene=0#rd</a></li>
 </ul>
 <p>注意：重新release编译后，这些文件会被覆盖，所以没发布程序，最好都保存一份配置文件。</p>
 
@@ -423,29 +423,30 @@
 
                 <!-- Post Comments -->
                 
-    <!-- 使用多说评论 -->
-    <link rel="stylesheet" href="/css/duoshuo.min.css">
-<style>
-    #ds-thread #ds-reset .ds-post-button{
-        background-color: #0097A7 !important;
-    }
-    #ds-wrapper #ds-reset .ds-icons-32{
-        background-color: #0097A7 !important;
-    }
-    #ds-reset .ds-highlight {
-        color: #0097A7 !important;
-    }
-</style>
-<div id="comments">
-    <!-- 多说评论框 start -->
-        <div class="ds-thread" 
-            data-thread-key="2016/05/05/Android混淆详解/" 
-            data-url="http://dalingge.com/2016/05/05/Android混淆详解/"
-            data-title="Android混淆详解"></div>
-    <!-- 多说评论框 end -->
+    
+        <!-- Giscus 评论 -->
+        
+<div id="comments" style="padding: 20px 24px;">
+    <div id="giscus-container"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="dalingge/dalingge.github.io"
+        data-repo-id=""
+        data-category="General"
+        data-category-id=""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
 </div>
 
 
+    
 
             </div>
 
@@ -737,9 +738,15 @@ It will not impact the appearance and can give developers a lot of support :)
 </footer>
                 
 				<!-- Import File -->
+
 <script src="/js/highlight.min.js"></script>
+
+
 <script src="/js/js.min.js"></script>
+
+
 <script src="/js/nprogress.js"></script>
+
 
 <script type="text/javascript">
     NProgress.configure({
@@ -770,23 +777,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
     <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-    <!-- 多说公共 js 代码 start -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"dalingge"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = 'https://static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-    </script>
-    <!-- 多说公共 js 代码 end -->
 
 
 

@@ -52,8 +52,12 @@
     <![endif]-->
     
     <!-- Import CSS -->
-    <link rel="stylesheet" href="/css/material.min.css">
-    <link rel="stylesheet" href="/css/style.min.css">
+    
+<link rel="stylesheet" href="/css/material.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.min.css">
+
     <!-- Config CSS -->
 
 
@@ -155,22 +159,28 @@
         }
     </style>
 
-	<script src="/js/jquery.min.js"></script>
 	
-	<link rel="stylesheet" href="/css/highlight/atelier-forest-light.css">
+<script src="/js/jquery.min.js"></script>
+
+	
+	
+<link rel="stylesheet" href="/css/highlight/atelier-forest-light.css">
+
 	
 	<!-- UC Browser Compatible-->
 	<script>
 		var agent = navigator.userAgent.toLowerCase();
 		if(agent.indexOf('ucbrowser')>0) {
-			document.write('<link rel="stylesheet" href="/css/uc.css">');
+			document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
 		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
 		}
 	</script>
     
     <!-- Custom Head -->
     
-</head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 	
 	
 
@@ -217,7 +227,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#筑基"><span class="post-toc-number">1.</span> <span class="post-toc-text">筑基</span></a></li></ol>
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AD%91%E5%9F%BA"><span class="post-toc-number">1.</span> <span class="post-toc-text">筑基</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -278,7 +288,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Android/">Android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Kotil/">Kotil</a>
+        <a class="post_tag-none-link" href="/tags/Android/" rel="tag">Android</a></li><li class="mdl-menu__item"><a class="post_tag-none-link" href="/tags/Kotil/" rel="tag">Kotil</a>
     </ul>
     
     <!-- Share -->
@@ -302,21 +312,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=开始修炼Kotiln&url=http://dalingge.com//2017/05/19/开始修炼Kotiln/index.html&via=达令哥" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=开始修炼Kotiln&url=http://dalingge.com//2017/05/19/%E5%BC%80%E5%A7%8B%E4%BF%AE%E7%82%BCKotiln/index.html&via=达令哥" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2017/05/19/开始修炼Kotiln/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://dalingge.com//2017/05/19/%E5%BC%80%E5%A7%8B%E4%BF%AE%E7%82%BCKotiln/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=开始修炼Kotiln&url=http://dalingge.com//2017/05/19/开始修炼Kotiln/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=开始修炼Kotiln&url=http://dalingge.com//2017/05/19/%E5%BC%80%E5%A7%8B%E4%BF%AE%E7%82%BCKotiln/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -339,29 +349,30 @@
 
                 <!-- Post Comments -->
                 
-    <!-- 使用多说评论 -->
-    <link rel="stylesheet" href="/css/duoshuo.min.css">
-<style>
-    #ds-thread #ds-reset .ds-post-button{
-        background-color: #0097A7 !important;
-    }
-    #ds-wrapper #ds-reset .ds-icons-32{
-        background-color: #0097A7 !important;
-    }
-    #ds-reset .ds-highlight {
-        color: #0097A7 !important;
-    }
-</style>
-<div id="comments">
-    <!-- 多说评论框 start -->
-        <div class="ds-thread" 
-            data-thread-key="2017/05/19/开始修炼Kotiln/" 
-            data-url="http://dalingge.com/2017/05/19/开始修炼Kotiln/"
-            data-title="开始修炼Kotiln"></div>
-    <!-- 多说评论框 end -->
+    
+        <!-- Giscus 评论 -->
+        
+<div id="comments" style="padding: 20px 24px;">
+    <div id="giscus-container"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="dalingge/dalingge.github.io"
+        data-repo-id=""
+        data-category="General"
+        data-category-id=""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
 </div>
 
 
+    
 
             </div>
 
@@ -370,7 +381,7 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2017/06/11/INBlockchain 的开源区块链 ICO 投资原则/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/05/19/从Java到Kotlin/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -384,7 +395,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/05/19/从Java到Kotlin/" id="post_nav-older" class="next-content">
+        <a href="/2017/05/13/使用原生ProgressBar实现左右进度条自定义样式/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -653,9 +664,15 @@ It will not impact the appearance and can give developers a lot of support :)
 </footer>
                 
 				<!-- Import File -->
+
 <script src="/js/highlight.min.js"></script>
+
+
 <script src="/js/js.min.js"></script>
+
+
 <script src="/js/nprogress.js"></script>
+
 
 <script type="text/javascript">
     NProgress.configure({
@@ -686,23 +703,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
     <!-- Busuanzi -->
-    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
-    <!-- 多说公共 js 代码 start -->
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"dalingge"};
-        (function() {
-            var ds = document.createElement('script');
-            ds.type = 'text/javascript';ds.async = true;
-            ds.src = 'https://static.duoshuo.com/embed.js';
-            ds.charset = 'UTF-8';
-            (document.getElementsByTagName('head')[0] 
-             || document.getElementsByTagName('body')[0]).appendChild(ds);
-        })();
-    </script>
-    <!-- 多说公共 js 代码 end -->
 
 
 
